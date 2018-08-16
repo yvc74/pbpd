@@ -3,11 +3,6 @@
   max-width: 1080px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #222;
   height: 150px;
@@ -23,7 +18,14 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+button, input, label, legend, .card, .btn {
+  width: 100%;
+}
+
+col {
+  margin: 5px;
+}
+
+container {
+  max-width: 95%;
 }

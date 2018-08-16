@@ -7,7 +7,7 @@ import {
 
 } from 'reactstrap';
 
-export default class LoginForm extends React.Component {
+export default class Login extends React.Component {
     constructor(props) {
         super(props);
 

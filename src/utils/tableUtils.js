@@ -1,4 +1,4 @@
-
+const moment = require("moment");
 const momentRandom = require("moment-random");
 
 const range = len => {
@@ -9,7 +9,7 @@ const range = len => {
   return arr;
 };
 
-const newPerson = () => {
+const newReport = () => {
   const randomUpdated = String(momentRandom().format("MM-DD-YYYY"));
   const randomPlaced = String(momentRandom().format("MM-DD-YYYY"));
   const randomChecked = String(momentRandom().format("MM-DD-YYYY"));
@@ -23,6 +23,7 @@ const newPerson = () => {
   const locationChance = Math.random();
   const userChance = Math.random();
   const driverChance = Math.random();
+  const reqStatusChance = Math.random();
   return {
     updatedDate: randomUpdated,
     placedDate: randomPlaced,
@@ -109,15 +110,31 @@ const newPerson = () => {
             ? "dclark"
             : driverChance > 0.2
               ? "tstevens"
-              : "eyarbrough"
+              : "eyarbrough",
+    requeststatus:
+      reqStatusChance > 0.46
+        ? "Active"
+        : reqStatusChance > 0.33
+          ? "Viewed"
+          : reqStatusChance > 0.2
+            ? "Outstanding"
+            : "Unknown",
+    store:
+      storeChance > 0.46
+        ? "Active"
+        : storeChance > 0.33
+          ? "Viewed"
+          : storeChance > 0.2
+            ? "Outstanding"
+            : "Unknown",
   };
 };
 
 export function makeData(len = 5553) {
   return range(len).map(d => {
     return {
-      ...newPerson(),
-      children: range(10).map(newPerson)
+      ...newReport(),
+      children: range(10).map(newReport)
     };
   });
 }

@@ -3,11 +3,10 @@ import DatePicker from 'react-datepicker';
 import moment from 'moment';
 import { Button, Row, Col, FormGroup, Input, Label, UncontrolledCollapse } from 'reactstrap';
 
-import DateOptions from './DateOptions';
-import TrailerOptions from './TrailerOptions';
-import MoreOptions from './MoreOptions';
+//Proprietary Components and Page Links
+import { DateOptions, MoreOptions, TrailerOptions } from '../utils/importUtils';
 
-export default class AdminSubmit extends React.Component {
+export default class RequestSubmit extends React.Component {
     constructor (props, context) {
         super(props, context)
 

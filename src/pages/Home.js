@@ -3,34 +3,22 @@ import {
     Card, CardBody, CardTitle, CardText, Container, Col, Row
 } from 'reactstrap';
 
-import AdminSubmit from '../components/AdminSubmit';
-import AdminQuickTool from '../components/AdminQuickTool';
-import History from '../components/History';
+//Proprietary Components and Page Links
+import { AdminQuickTool, RecordTable} from '../utils/importUtils';
 
 export default props => (
     <Container>
         <Row>
             <Col className="col-9">
-                <Row>
-                    <Card>
-                        <CardBody>
-                            <CardTitle>Admin Report Request</CardTitle>
-                            <CardText>
-                                <AdminSubmit></AdminSubmit>
-                            </CardText>
-                        </CardBody>
-                    </Card>
-                </Row>
-                <Row className="my-3">
-                    <Card>
-                        <CardBody>
-                            <CardTitle>Request History</CardTitle>
-                            <CardText>  
-                                <History></History>
-                            </CardText>
-                        </CardBody>
-                    </Card>
-                </Row>
+                <Card>
+                    <CardBody>
+                        <CardTitle>Current Requests</CardTitle>
+                        <CardText>  
+                        <h5>Add for loop to add records</h5>
+                            <RecordTable></RecordTable>
+                        </CardText>
+                    </CardBody>
+                </Card>
             </Col>
             <Col className="col-3">
                 <Card>

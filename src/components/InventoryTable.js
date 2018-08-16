@@ -1,5 +1,6 @@
 import React from "react";
-import { CSVLink } from "react-csv";
+import { makeData } from "../utils/tableUtils";
+import { CSVLink, CSVDownload } from "react-csv";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   Button,
@@ -17,11 +18,8 @@ import ReactTable from "react-table";
 import moment from "moment";
 import "react-table/react-table.css";
 
-//Proprietary Components and Page Links
-import { makeData } from "../utils/tableUtils";
 
-
-export default class ReportTable extends React.Component {
+export default class InventoryTable extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -39,11 +37,11 @@ export default class ReportTable extends React.Component {
               <Container>
                 <Row>
                   <Col xs="11">
-                    <CardTitle> Admin Report : {today} </CardTitle>
+                    <CardTitle> Trailer Inventory Report : {today} </CardTitle>
                   </Col>
                   <Col xs="1">
                     <Button className="mb-2 mt-0 px-3" title="Download CSV">
-                      <CSVLink data={data} target="_blank" /> <FontAwesomeIcon icon="download" />
+                      <CSVDownload data={data} target="_blank" /> <FontAwesomeIcon icon="download" />
                     </Button>
                   </Col>
                 </Row>

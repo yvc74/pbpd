@@ -3,17 +3,19 @@ import {
     Button
 } from 'reactstrap';
 
+//Proprietary Components and Page Links
+import { DispatchChart } from '../utils/importUtils';
+
 export default class DispatchQuickTool extends React.Component{
     render() {
        return <div>
+                <div>
+                <DispatchChart></DispatchChart>
+                </div>
                 Requests
-                <Button className="mb-2" color="info">Reconcile Requests</Button>
-                <Button className="mb-2" color="info">View New Requests</Button>
-                <Button className="mb-3" color="info">View Active Requests</Button>
-                <Button color="info">View Available Assets</Button>
-                Create
-                <Button className="mb-2" color="info">Add New Driver</Button>
-                
+                <div>
+                    <Button className="mb-3" color="info">Available Assets</Button>
+                </div>
               </div>
        }
  }

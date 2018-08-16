@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-import TrailerForm from './TrailerForm';
+//Proprietary Components and Page Links
+import { TrailerForm } from '../utils/importUtils';
 
 class NewTrailerModal extends React.Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class NewTrailerModal extends React.Component {
   render() {
     return (
       <div>
-        <Button color="info" onClick={this.toggle}>Add New Trailer</Button>
+        <Button className="mb-2" color="info" onClick={this.toggle}>New Trailer</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>New Trailer Form</ModalHeader>
           <ModalBody>

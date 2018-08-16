@@ -4,7 +4,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 //Proprietary Components and Page Links
 import { PersonForm } from '../utils/importUtils';
 
-class NewUserModal extends React.Component {
+class NewDriverModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,9 +23,9 @@ class NewUserModal extends React.Component {
   render() {
     return (
       <div>
-        <Button className="mb-2" color="info" onClick={this.toggle}>New User</Button>
+        <Button className="mb-2" color="info" onClick={this.toggle}>New Driver</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>New User Form</ModalHeader>
+          <ModalHeader toggle={this.toggle}>New Driver Form</ModalHeader>
           <ModalBody>
             <PersonForm></PersonForm>
           </ModalBody>
@@ -39,4 +39,4 @@ class NewUserModal extends React.Component {
   }
 }
 
-export default NewUserModal;
+export default NewDriverModal;

@@ -2,23 +2,21 @@ import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 import { Redirect, Route, Switch } from 'react-router-dom';
 
-import Dispatch from './pages/Dispatch';
-import Header from './components/Header';
-import Home from './pages/Home';
-import LoginForm from './pages/LoginForm';
-import Profile from './pages/Profile';
-import Requests from './components/Requests';
-import ReportPage from './pages/ReportPage';
-import Settings from './pages/Settings';
-import Stores from './pages/Stores';
+//Proprietary Components and Page Links
+import { Dispatch, Header, Home, Login, Profile, NewRequest, ReportPage, Settings, Stores } from './utils/importUtils';
 
 import './App.css';
-import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
-import 'mdbreact/dist/css/mdb.css';
 import 'react-datepicker/dist/react-datepicker.css';
 
+
 class App extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {};
+    }
+
 
   render() {
     return (
@@ -42,14 +40,14 @@ class App extends Component {
                   path="/dispatch"
               />
               <Route
-                  component={LoginForm}
+                  component={Login}
                   exact
                   path="/login"
               />
               <Route
-                  component={Requests}
+                  component={NewRequest}
                   exact
-                  path="/requests"
+                  path="/request"
               />
               <Route
                   component={Profile}

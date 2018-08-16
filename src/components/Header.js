@@ -50,6 +50,9 @@ export default class Header extends React.Component {
                 <Collapse className="justify-content-end" isOpen = { this.state.collapse } navbar>
                     <Nav>
                         <NavItem>
+                            <NavLink tag={Link} to="/">Admin</NavLink>
+                        </NavItem>
+                        <NavItem>
                             <NavLink tag={Link} to="/dispatch">Dispatch</NavLink>
                         </NavItem>
                         <NavItem>
@@ -59,7 +62,6 @@ export default class Header extends React.Component {
                             <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                             <DropdownToggle nav caret></DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem tag={Link} to="/requests">Requests</DropdownItem>
                                 <DropdownItem tag={Link} to="/reports">Reports</DropdownItem>
                                 <DropdownItem tag={Link} to="/profile">Your Profile</DropdownItem>
                                 <DropdownItem tag={Link} to="/settings">Settings</DropdownItem>

@@ -3,34 +3,14 @@ import {
     Container, Col, Row, Card, CardBody, CardTitle, CardText
 } from 'reactstrap';
 
-import DispatchSubmit from '../components/DispatchSubmit';
-import DispatchQuickTool from '../components/DispatchQuickTool';
-import History from '../components/History';
+//Proprietary Links
+import { DispatchQuickTool, RequestFeed } from '../utils/importUtils';
 
 export default props => (
     <Container>
         <Row>
             <Col className="col-9">
-                <Row>
-                    <Card>
-                        <CardBody>
-                            <CardTitle>Dispatch Report Request</CardTitle>
-                            <CardText>
-                                <DispatchSubmit></DispatchSubmit>
-                            </CardText>
-                        </CardBody>
-                    </Card>
-                </Row>
-                <Row className="my-3">
-                    <Card>
-                        <CardBody>
-                            <CardTitle>Request History</CardTitle>
-                            <CardText>  
-                                <History></History>
-                            </CardText>
-                        </CardBody>
-                    </Card>
-                </Row>
+                <RequestFeed></RequestFeed>
             </Col>
             <Col className="col-3">
                 <Card>

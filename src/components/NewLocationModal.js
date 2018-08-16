@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-import LocationForm from './LocationForm';
+//Proprietary Components and Page Links
+import { LocationForm } from '../utils/importUtils';
 
 class NewLocationModal extends React.Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class NewLocationModal extends React.Component {
   render() {
     return (
       <div>
-        <Button color="info" onClick={this.toggle}>Add New Location</Button>
+        <Button className="mb-2" color="info" onClick={this.toggle}>New Location</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>New Location Form</ModalHeader>
           <ModalBody>
