@@ -24,6 +24,7 @@ const newReport = () => {
   const userChance = Math.random();
   const driverChance = Math.random();
   const reqStatusChance = Math.random();
+  const storeChance = Math.random();
   return {
     updatedDate: randomUpdated,
     placedDate: randomPlaced,
